@@ -38,5 +38,8 @@ root                    (project root folder)
 * Asciimatics 1.12.0
 
 ## Authors
----
-* # TODO: Add your names and emails here
+Allison Day : allisonbday@byui.edu
+
+Conner Haar : haa18002@byui.edu
+
+Mark Howard : how17014@byui.edu
