@@ -11,6 +11,7 @@ from game.input_service import InputService
 from game.output_service import OutputService
 from asciimatics.screen import Screen 
 from game.ball import Ball
+from game.brick import Brick
 
 def main(screen):
 
@@ -25,14 +26,12 @@ def main(screen):
     paddle.set_position(position)
     cast["paddle"] = [paddle]
 
-    cast["brick"] = []
+    bricks = []
     for x in range(5, 75):
         for y in range(2, 6):
-            position = Point(x, y)
-            brick = Actor()
-            brick.set_text("*")
-            brick.set_position(position)
-            cast["brick"].append(brick)
+            brick = Brick(x, y)
+            bricks.append(brick)
+    cast["bricks"] = bricks
 
     ball = Ball()
     cast["ball"] = [ball]

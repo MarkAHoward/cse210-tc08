@@ -1,7 +1,5 @@
 from game.action import Action
 
-# TODO: Define the DrawActorsAction class here
-
 class DrawActorsAction(Action):
     def __init__(self, _output_service):
         self._output_service = _output_service
@@ -10,15 +8,15 @@ class DrawActorsAction(Action):
     def execute(self, cast):
         self._output_service.clear_screen()
 
-        marquee = cast["marquee"][0]
-        self._output_service.draw_actor(marquee)
+        ball = cast["marquee"][0]
+        self._output_service.draw_actor(ball)
 
-        robot = cast["robot"][0]
-        self._output_service.draw_actor(robot)
+        paddle = cast["paddle"][0]
+        self._output_service.draw_actor(paddle)
 
-        artifacts = cast["artifact"]
+        bricks = cast["bricks"]
 
-        for actor in artifacts:
+        for actor in bricks:
             self._output_service.draw_actor(actor)
         
         self._output_service.flush_buffer()
