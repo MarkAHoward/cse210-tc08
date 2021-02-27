@@ -1,6 +1,7 @@
 import random
 from game import constants
 from game.action import Action
+from game.point import Point
 
 class HandleCollisionsAction(Action):
     """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -25,3 +26,15 @@ class HandleCollisionsAction(Action):
                 ball.bounce_vertical()
         if ball.get_position().equals(paddle.get_position()):
             ball.bounce_vertical()
+
+        for i in range(0, constants.MAX_Y + 1):
+            if ball.get_position().equals(Point(0,i)):
+                ball.bounce_horizantal()
+            if ball.get_position().equals(Point(constants.MAX_X,i)):
+                ball.bounce_horizantal()
+        
+        for i in range(0, constants.MAX_X + 1):
+            if ball.get_position().equals(Point(i,0)):
+                ball.bounce_vertical()
+            if ball.get_position().equals(Point(i,constants.MAX_Y)):
+                ball.bounce_vertical()
