@@ -13,6 +13,7 @@ from asciimatics.screen import Screen
 from game.ball import Ball
 from game.brick import Brick
 from game.paddle import Paddle
+
 def main(screen):
 
     # create the cast {key: tag, value: list}
