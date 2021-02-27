@@ -22,5 +22,6 @@ class HandleCollisionsAction(Action):
         for brick in bricks:
             if ball.get_position().equals(brick.get_position()):
                 brick.remove_brick()
+                ball.bounce_vertical()
         if ball.get_position().equals(paddle.get_position()):
             ball.bounce_vertical()

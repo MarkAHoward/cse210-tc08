@@ -14,7 +14,17 @@ class Ball(Actor):
         self.set_velocity(velocity)
     
     def bounce_horizantal(self):
-        pass
+        velocity = self.get_velocity()
+        y = velocity.get_y()
+        x1 = velocity.get_x()
+        x = x1 * (-1)
+        velocity = Point(x, y)
+        self.set_velocity(velocity)
 
     def bounce_vertical(self):
-        pass
+        velocity = self.get_velocity()
+        x = velocity.get_x()
+        y1 = velocity.get_y()
+        y = y1 * (-1)
+        velocity = Point(x, y)
+        self.set_velocity(velocity)
