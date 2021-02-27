@@ -38,3 +38,9 @@ class HandleCollisionsAction(Action):
                 ball.bounce_vertical()
             if ball.get_position().equals(Point(i,constants.MAX_Y)):
                 ball.bounce_vertical()
+        
+        for i in range(0, constants.MAX_X + 1):
+            if paddle.get_position().equals(Point(i, constants.MAX_Y - 1)):
+                for j in range(i, i + 9):
+                    if ball.get_position().equals(Point(j, constants.MAX_Y - 1)):
+                        ball.bounce_vertical()
