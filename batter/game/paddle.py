@@ -1,7 +1,7 @@
 from game.actor import Actor
 
-class Paddle:
-    def __init__(self)
+class Paddle(Actor):
+    def __init__(self):
         super().__init__()
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y - 1)
@@ -12,3 +12,7 @@ class Paddle:
     def get_position(self):
     return self.position
 
+    def move_right(self):
+        pass
+    def move_left(self):
+        pass
