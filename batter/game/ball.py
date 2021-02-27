@@ -7,10 +7,10 @@ class Ball(Actor):
         super().__init__()
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
-        position = Point(x, y)
+        self.position = Point(x, y)
         velocity = Point(1, -1)
         self.set_text("@")
-        self.set_position(position)
+        self.set_position(self.position)
         self.set_velocity(velocity)
     
     def bounce_horizantal(self):
@@ -18,3 +18,6 @@ class Ball(Actor):
 
     def bounce_vertical(self):
         pass
+
+    def get_position(self):
+        return self.position
