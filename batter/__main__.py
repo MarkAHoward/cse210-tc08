@@ -12,6 +12,7 @@ from game.output_service import OutputService
 from asciimatics.screen import Screen 
 from game.paddle import Paddle
 
+
 def main(screen):
 
     # create the cast {key: tag, value: list}
@@ -30,14 +31,7 @@ def main(screen):
             brick.set_position(position)
             cast["brick"].append(brick)
 
-    x = int(constants.MAX_X / 2)
-    y = int(constants.MAX_Y / 2)
-    position = Point(x, y)
-    velocity = Point(1, -1)
-    ball = Actor()
-    ball.set_text("@")
-    ball.set_position(position)
-    ball.set_velocity(velocity)
+    ball = Ball()
     cast["ball"] = [ball]
     
     # create the script {key: tag, value: list}
