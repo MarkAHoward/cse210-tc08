@@ -8,7 +8,7 @@ class DrawActorsAction(Action):
     def execute(self, cast):
         self._output_service.clear_screen()
 
-        ball = cast["marquee"][0]
+        ball = cast["ball"][0]
         self._output_service.draw_actor(ball)
 
         paddle = cast["paddle"][0]
