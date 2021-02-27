@@ -1,4 +1,6 @@
 from game.actor import Actor
+from game import constants
+from game.point import Point
 
 class Paddle(Actor):
     def __init__(self):
@@ -10,8 +12,7 @@ class Paddle(Actor):
         self.set_position(position)
 
     def get_position(self):
-        return self.position
-
+        return self.positiony
     def move_right(self):
         pass
     def move_left(self):
