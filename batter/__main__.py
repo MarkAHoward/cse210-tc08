@@ -10,19 +10,16 @@ from game.move_actors_action import MoveActorsAction
 from game.input_service import InputService
 from game.output_service import OutputService
 from asciimatics.screen import Screen 
-from game.ball import Ball
+from game.paddle import Paddle
+
 
 def main(screen):
 
     # create the cast {key: tag, value: list}
     cast = {}
 
-    x = int(constants.MAX_X / 2)
-    y = int(constants.MAX_Y - 1)
-    position = Point(x, y)
-    paddle = Actor()
-    paddle.set_text("===========")
-    paddle.set_position(position)
+
+    paddle = Paddle()
     cast["paddle"] = [paddle]
 
     cast["brick"] = []
