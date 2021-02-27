@@ -17,8 +17,6 @@ class InputService:
         """The class constructor."""
         self._screen = screen
         self._keys = {}
-        self._keys[119] = Point(0, -1) # w
-        self._keys[115] = Point(0, 1) # s
         self._keys[97] = Point(-1, 0) # a
         self._keys[100] = Point(1, 0) # d
         

@@ -11,8 +11,6 @@ class Paddle(Actor):
         self.set_text("===========")
         self.set_position(self.position)
 
-    def get_position(self):
-        return self.positiony
     def move_right(self):
         pass
     def move_left(self):
