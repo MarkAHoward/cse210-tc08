@@ -9,7 +9,7 @@ class Paddle(Actor):
         y = int(constants.MAX_Y - 1)
         self.position = Point(x, y)
         self.set_text("===========")
-        self.set_position(position)
+        self.set_position(self.position)
 
     def get_position(self):
         return self.positiony
