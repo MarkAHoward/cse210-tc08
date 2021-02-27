@@ -41,6 +41,17 @@ class HandleCollisionsAction(Action):
         
         for i in range(0, constants.MAX_X + 1):
             if paddle.get_position().equals(Point(i, constants.MAX_Y - 1)):
-                for j in range(i, i + 10):
+                for j in range(i, i + 6):
                     if ball.get_position().equals(Point(j, constants.MAX_Y - 1)):
-                        ball.bounce_vertical()
+                        if ball.get_velocity().equals(Point(-1, 1)):
+                            ball.bounce_vertical()
+                        else:
+                            ball.bounce_vertical()
+                            ball.bounce_horizantal()
+                for j in range(i + 6, i + 10):
+                    if ball.get_position().equals(Point(j, constants.MAX_Y - 1)):
+                        if ball.get_velocity().equals(Point(1, 1)):
+                            ball.bounce_vertical()
+                        else:
+                            ball.bounce_vertical()
+                            ball.bounce_horizantal()
