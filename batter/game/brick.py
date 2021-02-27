@@ -7,3 +7,7 @@ class Brick(Actor):
         position = Point(x, y)
         self.set_text("*")
         self.set_position(position)
+    
+    def remove_brick(self):
+        position = Point(-1, 0)
+        self.set_position(position)
