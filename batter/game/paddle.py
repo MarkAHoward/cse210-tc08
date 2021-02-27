@@ -10,7 +10,7 @@ class Paddle(Actor):
         self.set_position(position)
 
     def get_position(self):
-    return self.position
+        return self.position
 
     def move_right(self):
         pass
