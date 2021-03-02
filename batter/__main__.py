@@ -26,8 +26,15 @@ def main(screen):
     bricks = []
     for x in range(5, 75):
         for y in range(2, 6):
-            brick = Brick(x, y)
-            bricks.append(brick)
+            rando = random.randint(1,20)
+            if rando == 5:
+                brick = Brick(x, y)
+                brick.insert_powerup()
+                bricks.append(brick)
+            else:
+                brick = Brick(x, y)
+                bricks.append(brick)
+
     cast["bricks"] = bricks
 
     ball = Ball()

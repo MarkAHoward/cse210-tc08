@@ -11,3 +11,6 @@ class Brick(Actor):
     def remove_brick(self):
         position = Point(-1, 0)
         self.set_position(position)
+    
+    def insert_powerup(self):
+        self.set_text("O")

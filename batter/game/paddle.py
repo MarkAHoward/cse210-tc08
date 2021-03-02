@@ -1,6 +1,7 @@
 from game.actor import Actor
 from game import constants
 from game.point import Point
+import random
 
 class Paddle(Actor):
     def __init__(self):
@@ -11,7 +12,11 @@ class Paddle(Actor):
         self.set_text("===========")
         self.set_position(self.position)
 
-    def move_right(self):
-        pass
-    def move_left(self):
-        pass
+    def change_paddle(self):
+        rando = random.randint(1,2)
+        if rando == 1:
+            self.set_text("=================")
+        else:
+            self.set_text("=====")
+
+        
